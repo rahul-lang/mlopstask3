@@ -14,12 +14,12 @@ def train_model(neurons , model , epochs , test) :
 	model.add(Dense(units=60 , input_dim = 28*28 , activation = 'relu'))
 	model.add(Dense(units=10 , input_dim = 28*28 , activation = 'softmax'))
 	model.compile( optimizer= "Adam" , loss='categorical_crossentropy', 
-	             metrics=['accuracy'] )
+	             metrics=['acc'] )
 	return model
 
 def validate(fit_model, epochs):
 	text = fit_model.history
-	accuracy = text['accuracy'][epochs-1] * 100
+	accuracy = text['acc'][epochs-1] * 100
 	accuracy = int(accuracy)
 	f= open("accuracy.txt","w+")
 	f.write(str(accuracy))
