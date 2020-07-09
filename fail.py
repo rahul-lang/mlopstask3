@@ -2,7 +2,7 @@ import smtplib
 s = smtplib.SMTP('smtp.gmail.com', 587)
 s.starttls()
 
-s.login("rchakavorty4@gmail.com", "rahulisarrow")
+s.login("rchakravorty4@gmail.com", "rahulisarrow")
 
 
 message = "Accuracy is less than 90%.Please try again"
