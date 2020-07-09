@@ -62,7 +62,7 @@ def send_email(subject, msg):
         server.starttls()
         server.login("rchakravorty4@gmail.com", "rahulisarrow")
         message = 'Subject: {}\n\n{}'.format(subject, msg)
-        server.sendmail(rchakravorty4@gmail.com, rchakravorty4@gmail.com, message)
+        server.sendmail("rchakravorty4@gmail.com", "rchakravorty4@gmail.com", message)
         server.quit()
         print("Success: Email sent!")
     except:
