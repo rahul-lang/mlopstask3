@@ -22,11 +22,11 @@ model.add(Dense(units = 20 , input_dim = 28*28 , activation = 'relu'))
 model.add(Dense(units=60 , input_dim = 28*28 , activation = 'relu'))
 model.add(Dense(units=10 , input_dim = 28*28 , activation = 'softmax'))
 model.compile( optimizer= "Adam" , loss='categorical_crossentropy', 
-             metrics=['accuracy'] )
+             metrics=['acc'] )
 fit_model = model.fit(train_X ,  train_y , epochs = 2 , verbose =  False)
 
 text = fit_model.history
-accuracy = text['accuracy'][1] * 100
+accuracy = text['acc'][1] * 100
 accuracy = int(accuracy)
 f= open("accuracy.txt","w+")
 f.write(str(accuracy))
